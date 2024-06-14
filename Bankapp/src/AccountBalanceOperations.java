@@ -71,8 +71,8 @@ public class AccountBalanceOperations extends AccountInput{
         }
         else {
 
-            Main.database.setChangeBalance(username, Main.database.getBalance(username) - amount);
-            Main.database.setChangeBalance(this.username2, Main.database.getBalance(this.username2) + amount);
+            Main.database.setChangeBalance(username, Main.database.getBalance(username) - amount/2);
+            Main.database.setChangeBalance(this.username2, Main.database.getBalance(this.username2) + amount/2);
 
             return 3;
         }

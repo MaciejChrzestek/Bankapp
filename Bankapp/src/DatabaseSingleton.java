@@ -3,14 +3,16 @@ import java.util.HashMap;
 
 //Simple Database model
 public class DatabaseSingleton {
-    private volatile HashMap<String, String> userLogin;
-    private volatile HashMap<String, Integer> userBalance;
+    private final HashMap<String, String> userLogin;
+    private final HashMap<String, Integer> userBalance;
 
     private DatabaseSingleton() {
         userLogin = new HashMap<>();
         userBalance = new HashMap<>();
         userLogin.put("admin", "admin1");
         userBalance.put("admin", 1000);
+        userLogin.put("a", "a");
+        userBalance.put("a", 600);
     }
 
     public static DatabaseSingleton getInstance() {

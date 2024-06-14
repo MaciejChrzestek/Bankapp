@@ -5,7 +5,6 @@ public abstract class AccountInput {
         public static final Scanner scn = new Scanner(System.in);
 
         Integer choice;
-        //Integer choiceNumber = 3;
         protected static String username;
         protected static String password;
         protected static Integer amount;
@@ -15,7 +14,7 @@ public abstract class AccountInput {
 
         public void inputUsername(){
             try{
-                this.username = scn.nextLine();
+                username = scn.nextLine();
             }catch(Exception e){
                 System.out.println("You can only input letters.");
             }
@@ -23,7 +22,7 @@ public abstract class AccountInput {
         }
         public void inputPassword(){
             try{
-                this.password = scn.nextLine();
+                password = scn.nextLine();
             }catch(Exception e){
                 System.out.println("You can only input letters.");
             }
