@@ -12,7 +12,7 @@ public class View {
 
         }
 
-        if(Main.accountO.choice == 1) {
+        if(AccountInput.choice == 1) {
             usernameLogin();
             if (Main.accountO.login()) {
                 System.out.println("Successful login.");
@@ -22,7 +22,7 @@ public class View {
 
             }
         }
-        else if (Main.accountO.choice == 2){
+        else if (AccountInput.choice == 2){
             usernameLogin();
             if(Main.accountO.register()) {
                 System.out.println("Successful registration, you can login now.");
@@ -46,14 +46,14 @@ public class View {
             operationsOnAccount();
         }
 
-        if(Main.accountBO.choice == 1){
+        if(AccountInput.choice == 1){
             System.out.println("Input amount to deposit: ");
             Main.accountBO.inputAmount();
             Main.accountBO.deposit();
             System.out.println("Amount successfully deposited.");
             operationsOnAccount();
             }
-        else if (Main.accountBO.choice == 2) {
+        else if (AccountInput.choice == 2) {
                 System.out.println("Input amount to withdraw: ");
                 Main.accountBO.inputAmount();
                 if(Main.accountBO.withdraw()){
@@ -66,7 +66,7 @@ public class View {
                 }
 
         }
-        else if(Main.accountBO.choice == 3){
+        else if(AccountInput.choice == 3){
             System.out.println("Write name of the account you want to transfer money to.");
             Main.accountBO.inputUsername();
             System.out.println("Input amount to transfer: ");

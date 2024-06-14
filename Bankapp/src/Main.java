@@ -5,7 +5,6 @@ public class Main {
     public static AccountOperations accountO = new AccountOperations();
     public static AccountBalanceOperations accountBO = new AccountBalanceOperations();
     public static View vw = new View();
-    //public static AccountBalanceOperations operations = new AccountBalanceOperations();
     public static void main(String[] args) {
         vw.start();
     }

@@ -58,8 +58,6 @@ public class AccountBalanceOperations extends AccountInput{
         }
     }
     public Integer transfer(){
-        //Integer sum = Main.database.getBalance(username) - amount;
-        //Integer sum2 = Main.database.getBalance(this.username2) + amount;
         if(!Main.database.getAccount(this.username2)){
             return 1;
         }
