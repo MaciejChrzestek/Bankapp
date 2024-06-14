@@ -36,15 +36,14 @@ public class DatabaseSingleton {
     // checks if username is taken and create new account
     public boolean setNewAccount(String key, String value) {
         boolean b;
-        try {
-            userLogin.putIfAbsent(key, value);
+        if(!userLogin.containsKey(key)){
+            userLogin.put(key, value);
             userBalance.put(key, 0);
-            b = true;
-        } catch (Exception e) {
-            System.out.println("error");
-            b = false;
+            return true;
         }
-        return b;
+        else{
+            return false;
+        }
     }
     //change account balance
     public void setChangeBalance(String key, Integer value){

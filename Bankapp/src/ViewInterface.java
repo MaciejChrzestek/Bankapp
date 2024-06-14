@@ -1,6 +1,11 @@
 public interface ViewInterface {
     void start();
     void operationsOnAccount();
-    void usernameLogin();
+    void credentials();
+    void accountLogin();
+    void accountRegister();
+    void accountDeposit();
+    void accountWithdraw();
+    void accountTransfer();
 }
 
