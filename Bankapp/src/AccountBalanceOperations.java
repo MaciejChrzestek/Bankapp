@@ -1,10 +1,24 @@
 public class AccountBalanceOperations extends AccountInput{
 
     String username2;
-    @Override
-    public void changeChoice() {
-        super.choiceNumber = 4; // change amount of choices to 4
+
+    public void inputChoice(){
+        {
+
+            try {
+                Integer input = scn.nextInt();
+                scn.nextLine();
+
+                if (input > 4) {
+                    System.out.print("You can only chose number between 1 and 4.");
+                } else {
+                    this.choice = input;
+                }
+            } catch (Exception e) {
+                System.out.println("You can only input numbers.");
+            }
         }
+    }
     @Override
     public void inputUsername(){
         try{

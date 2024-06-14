@@ -1,6 +1,23 @@
 import java.util.Objects;
 
 public class AccountOperations extends AccountInput {
+    public void inputChoice(){
+        {
+
+            try {
+                Integer input = scn.nextInt();
+                scn.nextLine();
+
+                if (input > 3) {
+                    System.out.print("You can only chose number between 1 and 3.\n");
+                } else {
+                    this.choice = input;
+                }
+            } catch (Exception e) {
+                System.out.println("You can only input numbers.");
+            }
+        }
+    }
 
     public boolean login(){
         return Objects.equals(password, Main.database.getPassword(username));
@@ -17,7 +34,6 @@ public class AccountOperations extends AccountInput {
         username = null;
         password = null;
         amount = null;
-        Main.accountO.changeChoice();
         Main.vw.start();
     }
 }
