@@ -32,7 +32,11 @@ public class AccountBalanceOperations extends AccountInput{
         try {
             amount = scn.nextInt();
             scn.nextLine();
-
+            if(amount < 0){
+                System.out.println("Input only positive numbers.");
+                amount = 0;
+                inputAmount();
+            }
         } catch (Exception e) {
             System.out.println("You can only input numbers.");
         }
