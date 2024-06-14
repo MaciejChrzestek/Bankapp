@@ -4,12 +4,12 @@ public abstract class AccountInput {
 
         public static final Scanner scn = new Scanner(System.in);
 
-        Integer choice;
+        protected static Integer choice;
         protected static String username;
         protected static String password;
         protected static Integer amount;
 
-        abstract void inputChoice();
+        abstract Integer inputChoice();
 
 
         public void inputUsername(){

@@ -2,31 +2,28 @@ public class AccountBalanceOperations extends AccountInput{
 
     String username2;
 
-    public void inputChoice(){
+    public Integer inputChoice(){
         {
-
+            Integer error = 0;
             try {
                 Integer input = scn.nextInt();
                 scn.nextLine();
-
                 if (input > 4) {
-                    System.out.print("You can only chose number between 1 and 4.");
+                    error = 1;
                 } else {
-                    this.choice = input;
+                    choice = input;
+
                 }
             } catch (Exception e) {
-                System.out.println("You can only input numbers.");
+                error = 2;
+
             }
+        return error;
         }
     }
     @Override
     public void inputUsername(){
-        try{
             this.username2 = scn.nextLine();
-        }catch(Exception e){
-            System.out.println("You can only input letters.");
-        }
-
     }
     public void inputAmount(){
 

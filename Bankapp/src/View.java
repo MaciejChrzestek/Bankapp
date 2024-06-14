@@ -3,7 +3,15 @@ public class View {
     void start(){
 
         System.out.println("Press 1 to login, 2 to register or 3 to exit.");
-        Main.accountO.inputChoice();
+        if(Main.accountO.inputChoice() == 1){
+            System.out.print("You can only chose number between 1 and 3.\n");
+
+        }
+        else if (Main.accountO.inputChoice() == 2) {
+            System.out.println("You can only input numbers.");
+
+        }
+
         if(Main.accountO.choice == 1) {
             usernameLogin();
             if (Main.accountO.login()) {
@@ -11,14 +19,14 @@ public class View {
                 operationsOnAccount();
             } else {
                 System.out.println("Wrong username or password.");
-                start();
+
             }
         }
         else if (Main.accountO.choice == 2){
             usernameLogin();
             if(Main.accountO.register()) {
                 System.out.println("Successful registration, you can login now.");
-                start();
+
             }
 
         }
@@ -30,6 +38,14 @@ public class View {
         System.out.printf("Your account balance: %1$2s \n", Main.accountO.accountbalance());
         System.out.println("Press 1 to deposit, 2 to withdraw, 3 to transfer money to other accounts or 4 to logout.");
         Main.accountBO.inputChoice();
+        if (Main.accountBO.inputChoice() == 1){
+            System.out.print("You can only chose number between 1 and 4.");
+            operationsOnAccount();
+        } else if (Main.accountBO.inputChoice() == 2) {
+            System.out.println("You can only input numbers.");
+            operationsOnAccount();
+        }
+
         if(Main.accountBO.choice == 1){
             System.out.println("Input amount to deposit: ");
             Main.accountBO.inputAmount();
