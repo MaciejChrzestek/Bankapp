@@ -1,10 +1,11 @@
 import java.util.Scanner;
 
+
 public abstract class AccountInput {
 
         public static final Scanner scn = new Scanner(System.in);
 
-        protected static Integer choice;
+        protected static String choice;
         protected static String username;
         protected static String password;
         protected static Integer amount;

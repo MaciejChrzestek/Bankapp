@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class AccountBalanceOperations extends AccountInput{
 
     String username2;
@@ -5,17 +7,14 @@ public class AccountBalanceOperations extends AccountInput{
     public Integer inputChoice(){
         {
             Integer error = 0;
-            try {
-                Integer input = scn.nextInt();
-                scn.nextLine();
-                if (input > 4) {
-                    error = 1;
-                } else {
-                    choice = input;
 
+                String input = scn.nextLine();
+                if (Objects.equals(input, "1") || Objects.equals(input, "2") ||
+                        Objects.equals(input, "3") || Objects.equals(input,"4")){
+                    choice = input;
                 }
-            } catch (Exception e) {
-                error = 2;
+                else {
+                    error = 1;
 
             }
         return error;

@@ -2,25 +2,18 @@ import java.util.Objects;
 
 public class AccountOperations extends AccountInput {
     public Integer inputChoice(){
-        {
             Integer error = 0;
-                try {
 
-                    Integer input = scn.nextInt();
-                    scn.nextLine();
-
-                    if (input > 3) {
-                        error = 1;
-                    } else {
+            String input = scn.nextLine();
+                    if (Objects.equals(input, "1") || Objects.equals(input, "2") || Objects.equals(input, "3")) {
                         choice = input;
 
                     }
-                } catch (Exception e) {
-                    error = 2;
-
+                    else {
+                        error = 1;
                 }
             return error;
-        }
+
 
     }
 
