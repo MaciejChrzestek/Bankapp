@@ -1,6 +1,7 @@
 import java.util.Objects;
 
 public class AccountOperations extends AccountInput {
+    //input between 1-3
     public Integer inputChoice(){
             Integer error = 0;
 
@@ -16,16 +17,17 @@ public class AccountOperations extends AccountInput {
 
 
     }
-
+    //checks credentials
     public boolean login(){
         return Objects.equals(password, Main.database.getPassword(username));
     }
-
+    //register new user
     public boolean register(){return Main.database.setNewAccount(username, password);}
-
+    //checks account balance
     public Integer accountbalance(){
          return Main.database.getBalance(username);
     }
+    //logout user
     public void logout(){
         username = null;
         password = null;

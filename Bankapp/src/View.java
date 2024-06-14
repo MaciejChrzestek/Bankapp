@@ -6,7 +6,8 @@ public class View implements ViewInterface {
 
         System.out.println("Press 1 to login, 2 to register or 3 to exit.");
         if(Main.accountO.inputChoice() == 1){
-            System.out.print("You can only chose number between 1 and 3.\n");
+            System.out.print("You can only chose numbers between 1 and 3.\n");
+            start();
 
         }
 
@@ -32,15 +33,12 @@ public class View implements ViewInterface {
             Main.accountO.exitApp();
         }
     }
+
     public void operationsOnAccount(){
         System.out.printf("Your account balance: %1$2s \n", Main.accountO.accountbalance());
         System.out.println("Press 1 to deposit, 2 to withdraw, 3 to transfer money to other accounts or 4 to logout.");
-        Main.accountBO.inputChoice();
         if (Main.accountBO.inputChoice() == 1){
-            System.out.print("You can only chose number between 1 and 4.");
-            operationsOnAccount();
-        } else if (Main.accountBO.inputChoice() == 2) {
-            System.out.println("You can only input numbers.");
+            System.out.print("You can only chose numbers between 1 and 4.");
             operationsOnAccount();
         }
 
